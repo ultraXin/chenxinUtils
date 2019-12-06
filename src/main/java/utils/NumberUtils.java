@@ -1,4 +1,4 @@
-package com.bw.utils;
+package utils;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -16,5 +16,18 @@ public class NumberUtils {
 		BigDecimal b2 = BigDecimal.valueOf(num);
 		BigDecimal result = b2.divide(b1,5,RoundingMode.HALF_UP);
 		return result.multiply(BigDecimal.valueOf(100)).intValue();
+	}
+	/*
+	 * 编写代码测试工具包数字工具类中isNumber( )方法，该方法是判断参数是否为数字，包含小数，
+	 */
+	public static boolean isNumber(String str) {
+		boolean empty = str.isEmpty();
+		
+		if (empty) {
+			return false;
+		} else {
+			String string = "^(\\d+)|(\\d+\\.\\d+)$";
+			return str.matches(string);
+		}
 	}
 }

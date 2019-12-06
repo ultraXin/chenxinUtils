@@ -1,6 +1,7 @@
-package com.bw.utils;
+package utils;
 
 import java.io.UnsupportedEncodingException;
+import java.util.Collection;
 import java.util.Random;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -10,6 +11,14 @@ import java.util.regex.Pattern;
  * @author wanghd
  */
 public class StringUtil {
+	/*
+	 * java下编写代码测试工具包集合工具类中isEmpty (Collection<?>
+	 * src)方法，判断List、Set之类的对象是否有值，对象为空算没值， 对象不为空但没有元素也算没值。
+	 */
+	public static boolean isEmpty(Collection<?> src) {
+		return src.isEmpty();
+	}
+
 	
 	/**
 	 * 判断源字符串是否有值，空引号也算没值
